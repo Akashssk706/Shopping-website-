@@ -1,0 +1,93 @@
+<html>
+<head>
+    <title>Login Page</title>
+    <style>
+        h1{
+    background-color:blueviolet; color:cyan;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    border:5px outset blueviolet;
+}
+tr{text-align:center}
+body
+{
+    margin: 0;
+    padding: 0;
+    background-color:#6abadeba;
+    font-family: 'Arial';
+}
+.log{
+        width: 30%;
+        margin: 0 0 0 400px;
+        padding: 80px;
+        background: #23463f;
+        border-radius: 15px ;
+
+}
+h2{
+    text-align: center;
+    color: #277582;
+    padding: 20px;
+}
+label{
+    color: #08ffd1;
+    font-size: 17px;
+}
+#username,#password,#sub{
+    width: 300px;
+    height: 30px;
+    padding-left: 4px;
+}
+
+
+
+    </style>
+</head>
+<body>
+    <div class="head1">
+
+        <h1 >WELCOME TO AKASH SUPER MARKET<br><br><br></h1>
+    </div>
+    <br><br><br>
+    <div class="log">
+        <h2 >Login Form</h2>
+        <table align="center">
+            <tr>
+                <th>
+                    <label for="username">Username:</label><br>
+                </th>
+                <th>
+                    <input type="text" id="username" name="username"><br>
+                </th>
+            </tr>
+            <tr>
+                <th><label for="password">Password:</label><br></th>
+                <th><input type="password" id="password" name="password"><br><br></th>
+            </tr>
+            <tr><th colspan="2"><input type="submit" value="Submit" id="sub" onclick="validateForm()"></th></tr>
+        </table>
+    
+    <form>
+        
+        
+        
+        
+        
+    </form> 
+    </div>
+    <script>
+        function validateForm() {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+            console.log(username,password)
+            if (username == "user" && password == "pass") {
+                window.alert("Login successful");
+                return true;
+            } else {
+                window.alert("Invalid login credentials");
+                return false;
+            }
+        }
+    </script>
+</body>
+</html>
